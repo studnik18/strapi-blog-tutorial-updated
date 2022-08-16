@@ -1,3 +1,13 @@
+# Blog site created by following strapi tutorial
+
+I followed the tutorial [Build a blog with React, Strapi and Apollo](https://strapi.io/blog/build-a-blog-with-react-strapi-and-apollo) and updated a few things along the way:
+
++ In react v18 there's a new createRoot API, which I used in `index.js`. [Read more](https://github.com/facebook/react/blob/main/CHANGELOG.md#1800-march-29-2022)
++ `gql`, `ApolloClient` and `InMemoryCache` `are` available in `@apollo/client`, I updated the queries and apollo config. [Read more](https://www.apollographql.com/docs/react/data/queries/)
++ New version of `react-markdown` uses `children` prop instead of `source`. [Read more](https://github.com/remarkjs/react-markdown/blob/main/changelog.md#change-source-to-children).
++ Added the `rehype-raw` plugin to the `ReactMarkdown` comp in `Article` container to show the embedded YouTube iframe. [Read more](https://github.com/rehypejs/rehype-raw)
++ Moved the `content` attribute from `category/articles` query to `articles/article` query. Additionally I added the `publishedAt` in the latter, so the article and it's publication date are displayed correctly (react-moment renders current date when no value is given).
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
